@@ -4,10 +4,9 @@ const axios = require('axios');
 const fs = require('fs');
 const _ = require('underscore');
 
-let url = `https://graph.facebook.com/v2.10/${group_id}/feed?fields=from,message,link,likes,story,name,updated_time,caption,permalink_url&limit=200&access_token=EAACEdEose0cBAOPDnZC6cWkRWh6tH8J4xJstH0KPpUgxCGxI9nCafi5P5DBocPWJqVZCj8VxjMZBDc9yLwtQ394zzCVkQAkPKDRWwZBLzecHRZATU7Uz0K6vmVIEsUNCBhk7wqTW2M2q6Ww2dnVqs3Uly1k4klC1q5SB4cZBZAZAgSmIifKRTzIX90UZAqrYtbREZD`;
-
-let out = [];
 let c = 1;
+let out = [];
+let url = `https://graph.facebook.com/v2.10/${group_id}/feed?fields=from,message,link,likes,story,name,updated_time,caption,permalink_url&limit=200&access_token=EAACEdEose0cBAOPDnZC6cWkRWh6tH8J4xJstH0KPpUgxCGxI9nCafi5P5DBocPWJqVZCj8VxjMZBDc9yLwtQ394zzCVkQAkPKDRWwZBLzecHRZATU7Uz0K6vmVIEsUNCBhk7wqTW2M2q6Ww2dnVqs3Uly1k4klC1q5SB4cZBZAZAgSmIifKRTzIX90UZAqrYtbREZD`;
 
 process.stdout.write('processing page: ' + c++);
 const get = url => {
