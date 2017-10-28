@@ -1,12 +1,16 @@
-//const group_id = '617651401610974';
-var group_id = '517272935059471';
+let group_id;
+group_id = '617651401610974';
+group_id = '517272935059471';
+group_id = '873530022667755'; // reactjs
 const axios = require('axios');
 const fs = require('fs');
 const _ = require('underscore');
 
 let c = 1;
 let out = [];
-let url = `https://graph.facebook.com/v2.10/${group_id}/feed?fields=from,message,link,likes,story,name,updated_time,caption,permalink_url&limit=200&access_token=EAACEdEose0cBAOPDnZC6cWkRWh6tH8J4xJstH0KPpUgxCGxI9nCafi5P5DBocPWJqVZCj8VxjMZBDc9yLwtQ394zzCVkQAkPKDRWwZBLzecHRZATU7Uz0K6vmVIEsUNCBhk7wqTW2M2q6Ww2dnVqs3Uly1k4klC1q5SB4cZBZAZAgSmIifKRTzIX90UZAqrYtbREZD`;
+let access_token = 'EAACEdEose0cBAOF03VfSihukFkg4wrVAg6y8MdgDstjO05cEQ3mcFXYKkgaIhWWCzhtxspWUBKKD6S9BT61SPPI6r1ilQg8MGirjDhXTG6MpiR6o6EHnXT9JFNEmcmOXzU2HlPX9yxn1WIQbncZAqyYEkR2xOn7znwXe9QoDP5ZBMxKmYaJLTZB5AdeQpX9RljzSTMnCV0AGwLc5J4p'
+let url = `https://graph.facebook.com/v2.10/${group_id}/feed?fields=from,message,link,likes,story,name,updated_time,caption,permalink_url&limit=200&access_token=${access_token}`;
+console.log (url)
 
 process.stdout.write('processing page: ' + c++);
 const get = url => {

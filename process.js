@@ -2,6 +2,7 @@ var _ = require('underscore');
 var data;
 data = require('./617651401610974-output.json');
 data = require('./517272935059471-output.json');
+data = require('./873530022667755-output.json');
 
 var from = {};
 
@@ -13,8 +14,11 @@ data.forEach(post => {
   }
   from[post.from.id].posts += 1;
   from[post.from.id].likes += _.size(likes.data);
-  //from[post.from.id].ratio = (from[post.from.id].likes/from[post.from.id].posts).toFixed(2);
+  from[post.from.id].ratio = parseInt((from[post.from.id].likes/from[post.from.id].posts).toFixed(2));
 });
 
-var out = _.indexBy(from, 'posts');
-console.log(out);
+let out = []
+//out = _.groupBy(from, d => d.ratio);
+out = _.groupBy(from, d => d.likes);
+console.log((out));
+console.log(`size = ${_.size(out)}`);
