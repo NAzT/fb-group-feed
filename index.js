@@ -1,5 +1,5 @@
-const group_id = '617651401610974';
-//var group_id = "517272935059471"
+//const group_id = '617651401610974';
+var group_id = '517272935059471';
 const axios = require('axios');
 const fs = require('fs');
 const _ = require('underscore');
