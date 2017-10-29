@@ -2,6 +2,8 @@ let group_id;
 group_id = '617651401610974';
 group_id = '517272935059471';
 group_id = '873530022667755'; // reactjs
+group_id = '520927924743689'; // nectec iot camp
+group_id = '1333051060145484'; // กลุ่มคนชอบตะลอนเที่ยวญี่ปุ่น
 const axios = require('axios');
 const fs = require('fs');
 const _ = require('underscore');

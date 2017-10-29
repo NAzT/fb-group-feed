@@ -3,6 +3,8 @@ var data;
 data = require('./617651401610974-output.json');
 data = require('./517272935059471-output.json');
 data = require('./873530022667755-output.json');
+data = require('./520927924743689-output.json');
+data = require('./1333051060145484-output.json');
 
 var from = {};
 
@@ -18,7 +20,7 @@ data.forEach(post => {
 });
 
 let out = []
-//out = _.groupBy(from, d => d.ratio);
-out = _.groupBy(from, d => d.likes);
+out = _.groupBy(from, d => d.ratio);
+//out = _.groupBy(from, d => d.likes);
 console.log((out));
 console.log(`size = ${_.size(out)}`);
